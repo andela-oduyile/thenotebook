@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.header {
+    margin-top: -15px;
+}
+
 .main-header {
     color: white;
    
@@ -38,4 +42,16 @@
 
 .features {
     margin-top: 300px;
+    margin-bottom: 150px;
+}
+
+.caption {
+    .caption-img {
+        width: 100%;
+    }
+    .caption-text {
+        margin-top: -200px;
+        color: white;
+        font-style: it
+    }
 }
