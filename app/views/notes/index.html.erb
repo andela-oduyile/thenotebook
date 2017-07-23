@@ -1,3 +1,10 @@
+<h1>Listing all Notes</h1>
+
+<%= form_tag notes_path, :method => 'get' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
 <% @notes.each do |note| %>
   <div class="">
     <h2> <%= link_to note.title, note %></h2>
@@ -6,3 +13,4 @@
 <% end %>
 
 <%= link_to "New Note", new_note_path %>
+
