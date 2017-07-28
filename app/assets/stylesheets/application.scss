@@ -14,7 +14,8 @@
  *= require_self
  */
 
-$primary-color: yellow;
+@import url('https://fonts.googleapis.com/css?family=Bellefair');
+$primary-color: #ffd600;
 
  .logo {
      height: 40px;
@@ -36,3 +37,47 @@ $primary-color: yellow;
      color: black;
      opacity: 2.0;
  }
+
+ .caption {
+    font-family: 'Bellefair', serif;
+}
+
+.login-div {
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+input#user_email.input_field:focus, input#user_password:focus {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ffc107;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+
+[type="checkbox"]:checked+label:before {
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #ffc107;
+    border-bottom: 2px solid #ffc107;
+}
+
+input[type="search"] {
+height: 64px !important; /* or height of nav */
+}
+
+nav {
+
+
+  ul {
+    height: 60%;
+  }
+}

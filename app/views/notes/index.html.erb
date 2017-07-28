@@ -1,16 +1,15 @@
-<h1>Listing all Notes</h1>
 
-<%= form_tag notes_path, :method => 'get' do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search" %>
-<% end %>
+<div class="container">
 
-<% @notes.each do |note| %>
-  <div class="">
-    <h2> <%= link_to note.title, note %></h2>
-    <p> <%= time_ago_in_words(note.created_at) %> </p>
+  <div class="row">
+    <% @notes.each do |note| %>
+      <div class="col s3 offset-s1 grey darken-4 note">
+        <h5> <%= link_to note.title, note %></h5>
+        <p class="amber-text"><i><%= time_ago_in_words(note.created_at) %></i></p>
+      </div>
+    <% end %>
   </div>
-<% end %>
 
-<%= link_to "New Note", new_note_path %>
-
+  <div class="fixed-action-btn">
+    <%= link_to "<i class='large material-icons'>add</i>".html_safe, new_note_path, :class => "btn-floating btn-large red" %>
+  </div>
