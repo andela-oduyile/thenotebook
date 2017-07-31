@@ -1,19 +1,22 @@
  <nav>
- <div class="nav-wrapper grey darken-4 row">
-    <span class="col s6">
-        <a href="/" class="logo-txt"><b>THENOTEB<%= image_tag("logo.png", :class => "logo") %>OK</b></a>
-    </span>
+   <div class="nav-wrapper grey darken-4 row">
+      <span class="col s6">
+          <a href="/" class="logo-txt"><b>THENOTEB<%= image_tag("logo.png", :class => "logo") %>OK</b></a>
+      </span>
 
-    <%= form_tag notes_path, :method => 'get', :class => "search-form col s4" do %>
-      <%= text_field_tag :search, params[:search], :placeholder => "Search notes..." %>
-    <% end %>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-    <% if user_signed_in?%>
-      <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %>  </li>
-    <% else %>
-        <li><%= link_to "login", new_user_session_path %></li>
-        <li><%= link_to "signup", new_user_registration_path %></li>
-    <% end%>
-    </ul>
-</div>
+
+      <ul id="nav-mobile" class="hide-on-med-and-down">
+      <% if user_signed_in?%>
+      <%= form_tag notes_path, :method => 'get', :class => "search-form  offset-s1 col s4" do %>
+        <%= text_field_tag :search, params[:search], :placeholder => "Search notes..." %>
+      <% end %>
+        <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %>  </li>
+      <% else %>
+        <span class="right">
+          <li><%= link_to "login", new_user_session_path %></li>
+          <li><%= link_to "signup", new_user_registration_path %></li>
+        </span>
+      <% end%>
+      </ul>
+  </div>
 </nav>
