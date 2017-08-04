@@ -1,5 +1,10 @@
-<h1>Edit your note</h1>
 
-<%= render "form" %>
+<div class="container edit_note_div">
+  <div class="row">
+    <div class="col s6 offset-s3">
+      <h3 class="center-align caption"><b>Edit this note</b></h3>
 
-<%= link_to "Cancel", note_path %>
+      <%= render('form') %>
+    </div>
+  </div>
+</div>

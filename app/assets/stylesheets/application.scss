@@ -47,7 +47,16 @@ $primary-color: #ffd600;
     margin-bottom: 100px;
 }
 
-input#user_email.input_field:focus, input#user_password:focus {
+.signup-div, .new_note_div, .edit_note_div {
+  margin-top: 80px;
+}
+
+input#user_email.input_field:focus,
+input#user_password:focus,
+input#user_password_confirmation:focus,
+input#user_email:focus,
+input#note_title:focus,
+textarea#note_content.materialize-textarea:focus {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #ffc107;
