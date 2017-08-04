@@ -2,20 +2,23 @@
 <div class="container">
 
   <div class="row">
-    <% @notes.each do |note| %>
-
-      <div class="col s12 m4">
-        <div class="card grey darken-4">
-          <div class="card-content white-text">
-            <span class="card-title" ><%= link_to note.title, note, :class => "white-text" %></span>
-            <p class="created-at"><small><%= time_ago_in_words(note.created_at).capitalize %> ago</small></p>
-          </div>
-          <div class="card-action">
-            <%= link_to "Edit", edit_note_path(note) %>
-            <%= link_to "Delete", note_path(note), method: :delete, data: { confirm: "Are you sure?" } %>
+    <% if @notes.empty? %>
+      <h3 class="caption center-align", id="no-note">You Have No Notes yet</h3>
+    <% else %>
+      <% @notes.each do |note| %>
+        <div class="col s12 m4">
+          <div class="card grey darken-4">
+            <div class="card-content white-text">
+              <span class="card-title" ><%= link_to note.title, note, :class => "white-text" %></span>
+              <p class="created-at"><small><%= time_ago_in_words(note.created_at).capitalize %> ago</small></p>
+            </div>
+            <div class="card-action">
+              <%= link_to "Edit", edit_note_path(note) %>
+              <%= link_to "Delete", note_path(note), method: :delete, data: { confirm: "Are you sure?" } %>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 
