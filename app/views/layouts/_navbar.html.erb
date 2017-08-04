@@ -7,9 +7,10 @@
 
       <ul id="nav-mobile" class="hide-on-med-and-down">
       <% if user_signed_in?%>
-      <%= form_tag notes_path, :method => 'get', :class => "search-form  offset-s1 col s4" do %>
-        <%= text_field_tag :search, params[:search], :placeholder => "Search notes..." %>
+      <%= form_tag notes_path, :method => 'get', :class => "search-form col s4" do %>
+        <%= text_field_tag :search, params[:search], :placeholder => "Search Notes..." %>
       <% end %>
+        <li><%= link_to('New Note', new_note_path) %></li>
         <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %>  </li>
       <% else %>
         <span class="right">
