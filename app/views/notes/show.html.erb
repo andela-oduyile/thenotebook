@@ -1,6 +1,10 @@
-<h1><%= @note.title %></h1>
-<p><%= @note.content %></p>
+<div class="container note-div">
 
-<%= link_to "All Notes", notes_path%>
-<%= link_to "Edit", edit_note_path(@note) %>
-<%= link_to "Delete", note_path(@note), method: :delete, data: { confirm: "Are you sure?" } %>
+  <h3 class="center-align caption"><%= @note.title %></h3>
+
+  <pre><%= @note.content %></pre>
+
+  <%= link_to "Edit", edit_note_path(@note), :class => "amber-text" %>
+  <%= link_to "Delete", note_path(@note), :class => "amber-text", method: :delete, data: { confirm: "Are you sure?",  } %>
+
+</div>

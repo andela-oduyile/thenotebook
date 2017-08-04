@@ -15,6 +15,7 @@
  */
 
 @import url('https://fonts.googleapis.com/css?family=Bellefair');
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
 $primary-color: #ffd600;
 
  .logo {
@@ -47,8 +48,18 @@ $primary-color: #ffd600;
     margin-bottom: 100px;
 }
 
-.signup-div, .new_note_div, .edit_note_div {
+.signup-div, .new_note_div, .edit_note_div, .note-div {
   margin-top: 80px;
+}
+
+.note-div {
+  margin-top: 40px;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: 'Vollkorn', serif;
+  font-size: 18px;
 }
 
 input#user_email.input_field:focus,
@@ -56,6 +67,7 @@ input#user_password:focus,
 input#user_password_confirmation:focus,
 input#user_email:focus,
 input#note_title:focus,
+input#search:focus,
 textarea#note_content.materialize-textarea:focus {
     background-color: transparent;
     border: none;
