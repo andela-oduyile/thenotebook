@@ -19,10 +19,19 @@
 
   <body>
     <div class="content">
-    <%= render 'layouts/navbar' %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <% if notice %>
+        <div id="notice-wrapper" class="amber lighten-2">
+          <p class="notice"><%= notice %></p>
+        </div>
+      <% elsif alert %>
+        <div id="notice-wrapper" class="amber lighten-2">
+          <p class="alert"><%= alert %></p>
+        </div>
+      <% end %>
+      <%= render 'layouts/navbar' %>
+
       <%= yield %>
     </div>
+
   </body>
 </html>
