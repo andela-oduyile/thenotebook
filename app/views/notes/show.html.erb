@@ -4,7 +4,8 @@
 
   <pre><%= @note.content %></pre>
 
-  <%= link_to "Edit", edit_note_path(@note), :class => "amber-text" %>
-  <%= link_to "Delete", note_path(@note), :class => "amber-text", method: :delete, data: { confirm: "Are you sure?",  } %>
-
+  <div class="action-btn">
+    <%= link_to "Edit", edit_note_path(@note), :class => "amber-text edit-btn" %>
+    <%= link_to "Delete", note_path(@note), :class => "amber-text delete-btn", method: :delete, data: { confirm: "Are you sure?",  } %>
+  </div>
 </div>
