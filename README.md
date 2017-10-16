@@ -15,7 +15,7 @@ A simple note taking app
 
 ## Local Development
 
-- Install npm dependencies bundle install
+- Install dependencies bundle install
 - To run the app: rails s
 
 ## Contributing
