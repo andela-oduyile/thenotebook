@@ -6,6 +6,7 @@ A simple note taking app
 - Create a Note
 - View all Notes created
 - Edit a given Note
+- Delete a given note
 - Search for a Note
 
 ## Technologies
