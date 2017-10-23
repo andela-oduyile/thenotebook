@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require rails-ujs
 //= require turbolinks
+//= require tinymce-jquery
 //= require_tree .
 
 $(document).ready(function() {
@@ -22,4 +23,5 @@ $(document).ready(function() {
       $(this).remove();
     })
   }, 2500);
+  $('.tooltipped').tooltip({delay: 50});
 });
