@@ -2,7 +2,7 @@
 
   <h3 class="center-align caption"><%= @note.title %></h3>
 
-  <pre><%= @note.content %></pre>
+  <pre><%= strip_tags(@note.content) %></pre>
 
   <div class="action-btn">
     <%= link_to "Edit", edit_note_path(@note), :class => "amber-text edit-btn" %>

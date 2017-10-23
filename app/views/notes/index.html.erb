@@ -23,5 +23,5 @@
   </div>
 
   <div class="fixed-action-btn">
-    <%= link_to "<i class='large material-icons'>add</i>".html_safe, new_note_path, :class => "btn-floating btn-large amber darken-2" %>
+    <%= link_to "<i class='large material-icons'>add</i>".html_safe, new_note_path, :class => "btn btn-floating btn-large amber darken-2 tooltipped", :data => { :position => 'left', :delay => '50', :tooltip => 'Create new note' } %>
   </div>
